@@ -1,0 +1,1058 @@
+/* Reset styles */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Calibri', sans-serif;
+}
+
+#parallax,
+#parallax-projects{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+    overflow: hidden;
+
+}
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+    /* opacity: 0.7; Adjust for readability */
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.logo {
+    font-size: 24px;
+    margin-left: 200px;
+    
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: 200px;
+}
+
+.nav-links li {
+    margin-left: 50px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+}
+
+.nav-icon {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* .nav-links a i {
+    margin-left: 5px; /* Add some space between the icon and the text */
+/* } */ 
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+/* Light/Dark Mode Styles */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    /* Dark text for light mode */
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+section {
+    min-height: 100vh;  /* Each section takes at least full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;  /* Top padding for navbar, horizontal padding for responsiveness */
+}
+
+#mode-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-sun {
+    color: #fff;
+}
+
+.dark-mode .fa-sun {
+    color: #333;
+}
+
+
+/*   Home Style   */
+
+#home {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    height: 80vh;
+    padding-top: 2px;  /* To account for the fixed navbar */
+}
+.dark-mode #home::before, #home::before {
+    content: 'LEETCODE';
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    font-size: 4rem;
+    color: rgba(200, 200, 200, 0.1);
+    z-index: -1;
+}
+.dark-mode #home::after, #home::after{
+    content: 'HOME';
+    position: absolute;
+    top:10vh;
+    right: 0;
+    font-size: 4rem;
+    color: rgba(200,200,200,.1);
+    z-index: -1;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #fff;  /* Always white */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* .profile-image i {
+    font-size: 150px;
+    color: #333;  /* Icon color */
+/* } */ 
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* This will make the image cover the entire circle without stretching */
+}
+
+.intro-text {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.intro-text h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #4a4a4a;  /* Slightly darker in light mode */
+}
+
+
+.highlight {
+    font-weight: bold;
+    transition: color 0.3s ease;  /* Smooth color transition */
+}
+
+.highlight {
+    color: #FFD700;  /* Yellow in light mode */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);  /* Subtle shadow for better visibility */
+}
+
+
+
+/* New class for the highlighted name */
+.highlight-name {
+    display: inline-block;  /* To apply styles properly */
+    color: #FFD700;  /* Yellow in light mode */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);  /* Stronger shadow for the name */
+    font-size: 1.1em;  /* Slightly larger than the surrounding text */
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;  /* Smooth transitions */
+}
+
+.dark-mode .highlight-name {
+    color: red;  /* Maroon in dark mode */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);  /* Light shadow for better visibility in dark mode */
+}
+
+/* Social link style */
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #555;
+}
+
+.social-links a i {
+    font-size: 20px;
+}
+
+
+
+/* About section Style */
+/* About Section Styles */
+.dark-mode #about::after, #about::after {
+    content: "GUARDRAILSAI";
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    color: rgba(200, 200, 200, 0.1);
+}
+#about::before,.dark #about::before{
+    content: "ABOUT ME";
+    position: absolute;
+    left: 1%;
+    top: 100%;
+    font-size: 4rem;
+    color: rgba(200,200,200,.1);
+}
+#about {
+    padding: 200px 100px;
+    /* background-color: #fff; */
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.sidebar {
+    flex: 0 0 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 60px;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+.nav-box {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-box:hover {
+    background-color: #555;
+}
+
+.nav-box h3 {
+    margin-bottom: 5px;
+}
+
+.content {
+    flex: 1;
+}
+
+.content-box {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.content-box h2 {
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.content-box p{
+    font-size: 20px;
+
+}
+
+.skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skill {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode Styles */
+/* body.dark-mode #about { */
+    /* background-color: #333; */
+/* } */
+
+body.dark-mode .sidebar {
+    background-color:white;
+    color: black;
+}
+
+body.dark-mode .nav-box:hover {
+    background-color: #666;
+}
+
+body.dark-mode .skill {
+    background-color:white;
+    color: black;
+}
+.content-box {
+    display: none;
+}
+
+.content-box.active {
+    display: block;
+}
+
+/* Ensure full-height sections */
+#home, #about, #projects, #education {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding-top: 80px;  /* To account for the fixed navbar */
+}
+#scroll-down{
+    position: absolute;
+    font-size: 1.2rem;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation:bounce 1s infinite;
+
+}
+.dark-mode #scroll-down a{
+    color: white;
+    text-decoration: none;
+}
+#scroll-down a{
+    color: #000;
+    text-decoration: none;
+}
+
+/*           ******************************  Project section ********************************************** */
+
+/* Projects Section Styles */
+.dark-mode #projects::before, #projects::before {
+    content: 'LANGCHAIN';
+    position: absolute;
+    bottom: 25%;
+    left: -5%;
+    font-size: 4rem;
+    transform: rotate(270deg);
+    color: rgba(200, 200, 200, 0.1);
+}
+.dark-mode #projects::after,#projects::after{
+    content:'PROJECTS';
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    font-size: 4rem;
+    transform: rotate(90deg);
+    /* z-index: -1; */
+    color: rgba(200,200,200,.1);
+}
+
+
+#projects {
+    position: relative;
+    width: 100%;
+    display: table;
+    /* background-color: #fff; */
+    
+  }
+
+.projects-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    margin-top: 0px;
+    transition: color 0.3s ease;
+    padding-right: 100px;
+    padding-left:10%;
+}
+
+
+.dark-mode .projects-heading {
+    color:white;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.project-box {
+    width: 400px;
+    height: 300px;
+    margin: 0 50px;
+    padding: 20px;
+    color: black;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.project-name {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode Styles */
+/* body.dark-mode #projects {
+    background-color: #333;
+} */
+
+body.dark-mode .project-box {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    
+}
+
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    height: 200px; /* Adjust the height as needed */
+}
+
+.project-content p {
+    flex-grow: 1;
+}
+
+/* Stack boxes */
+.stack-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.stack-box {
+    background-color: #00ccff;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* GitHub link */
+.github-link {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.github-link a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.github-link a:hover {
+    color: #555;
+}
+
+.github-link i {
+    margin-right: 5px;
+}
+
+
+/* education */
+#education{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0vh;
+    width: 100%;
+    min-height: 92vh;
+    /* opacity: 0; */
+    transform: translateY(100px);
+    transition: all .5s ease-in-out;
+}
+
+#education.animated{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dark-mode #education::before, #education::before {
+    content: 'PYSPARK';
+    position: absolute;
+    top: 20%;
+    right: 0%;
+    font-size: 4rem;
+    color: rgba(200, 200, 200, 0.1);
+}
+.dark-mode #education::after, #education::after{
+    content:'EXPERIENCE & EDUCATION';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    z-index: -1;
+    color: rgba(200,200,200,.1);
+}
+#education::after{
+    color:rgba(0,0,0,.1)
+}
+
+
+#education .icon i{
+    font-size: 30px;
+    color: #6c757d;
+}
+#education .icon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    line-height: 40px;
+    text-align: center;
+    z-index: 1;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #4169e1;;
+}
+#education .icon .fa{
+    font-size: 14px;
+    color: white;
+}
+.dark #education{
+    color: white;
+}
+#education .resume-box{
+    display: flex;
+    margin-right: 1.6em;
+}
+#education .exp1, #education .exp2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding:0 20px 0 60px;
+    margin: 0 0 50px;
+}
+.dark-mode #education .exp1::after,
+.dark-mode #education .exp2::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    border-left: 1px solid #fcfcfc;
+}
+#education .exp1::after,
+#education .exp2::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    border-left: 1px solid #333;
+}
+#education .info{
+    margin-left: 1.2rem;
+}
+#education .resume-box .time{
+    color: #fff;
+    font-size: 12px;
+    padding: 1px 10px;
+    display: inline-block;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: #111;
+    opacity: .8;
+}
+#education .resume-box h5{
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 7px 0 10px;
+}
+#education .resume-box .place{
+    opacity: .8;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    padding-left: 26px;
+}
+#education .resume-box .place::before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    left: 7px;
+    top: 9px;
+    opacity: .8;
+}
+.dark-mode #education .resume-box p{
+    margin: 0;
+    color: #eee;
+    /* color: black; */
+    font-size: 14px;
+}
+#education .resume-box p{
+    color: #333;
+    /* color: white; */
+}
+
+/* footer */
+
+#footer{
+    position: relative;
+    height: 35vh;
+    background-color: #212121;
+    margin-top:120px;
+}
+#footer .content{
+    display: flex;
+    padding: 20px 50px;
+}
+.content .footer-links{
+    flex: 1;
+}
+
+
+#footer .content .footer-links a{
+    display: block;
+    color: #dcdcdc;
+    font-size: 1.2rem;
+    text-decoration: none;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top:5px;
+}
+#footer .content .footer-links a:hover{
+    color:white;
+}
+
+
+.social-footer a{
+    margin: .5em;
+    font-size: 25px;
+    color: #ccc;
+}
+.social-footer a:hover{
+    color: white;
+}
+.social-footer .top-scroll a{
+    text-align: center;
+    text-decoration: none;
+    font-size:1rem;
+}
+#footer .copyright{
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top:80%;
+    padding-top:1rem;
+}
+
+@keyframes onload{
+    0%{
+        top: -10%;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+@keyframes scale-up{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.01);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes bounce2{
+    0%{
+        bottom: -3%;
+    }
+    50%{
+        bottom: -1%;
+    }
+    100%{
+        bottom: -3%;
+    }
+}
+@keyframes slide-down{
+    0%{
+        top: -10%;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+@keyframes slide-up{
+    0%{
+        bottom: -20%;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        bottom: 0;
+    }
+}
+@keyframes left-slide{
+    0%{
+        opacity: 0;
+        left: -10%;
+    }
+    100%{
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes vibrate{
+    0%{
+        transform: rotate(0);
+    }
+    10%{
+        transform: rotate(-4deg);
+    }
+    20%{
+        transform: rotate(4deg);
+    }
+    30%{
+        transform: rotate(-4deg);
+    }
+    40%{
+        transform: rotate(4deg);
+    }
+    50%{
+        transform: rotate(-4deg);
+    }
+    60%{
+        transform: rotate(4deg);
+    }
+    70%{
+        transform: rotate(-4deg);
+    }
+    80%{
+        transform: rotate(4deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+@keyframes navLinkFade{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce{
+    0%{
+        bottom: 3%;
+    }
+    50%{
+        bottom: 2%;
+    }
+    100%{
+        bottom: 3%;
+    }
+}
+
+@keyframes wave{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+@keyframes waveyy{
+    0%{
+        transform: rotate(0);
+    }
+    20%{
+        transform: rotate(-30deg);
+    }
+    40%{
+        transform: rotate(30deg);
+    }
+    60%{
+        transform: rotate(-15deg);
+    }
+    80%{
+        transform: rotate(15deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+    
+}
+
+
+
+
+/* Responsive Styles */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .nav-links {
+        margin-right: 0;
+    }
+
+    .nav-links li {
+        margin-left: 30px;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding-top: 100px;
+    }
+
+    .profile-image {
+        margin-bottom: 30px;
+    }
+
+    .intro-text {
+        align-items: center;
+    }
+
+    .social-links {
+        align-self: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .project-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-box {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    #education .resume-box {
+        flex-direction: column;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .nav-links {
+        display: none;
+    }
+
+    /* You may want to implement a mobile menu here */
+
+    .projects-heading {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    #footer .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footer .content .footer-links,
+    .social-footer {
+        margin-bottom: 30px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .intro-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-text p {
+        font-size: 1.2rem;
+    }
+
+    .content-box h2 {
+        font-size: 30px;
+    }
+
+    .content-box p {
+        font-size: 16px;
+    }
+
+    .project-box {
+        width: 90%;
+    }
+
+    #education .exp1, 
+    #education .exp2 {
+        padding: 0 10px 0 50px;
+    }
+
+    #education .resume-box h5 {
+        font-size: 16px;
+    }
+
+    #education .resume-box .place {
+        font-size: 14px;
+    }
+
+    #education .resume-box p {
+        font-size: 12px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-image i {
+        font-size: 100px;
+    }
+
+    .social-links a {
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+    }
+
+    .social-links a i {
+        font-size: 16px;
+    }
+
+    .projects-heading {
+        font-size: 2rem;
+    }
+
+    .project-box {
+        width: 100%;
+        height: auto;
+    }
+
+    #footer {
+        height: auto;
+    }
+
+    #footer .content {
+        padding: 20px;
+    }
+
+    #footer .content .footer-links a {
+        font-size: 1rem;
+    }
+
+    .social-footer a {
+        font-size: 20px;
+    }
+}

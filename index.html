@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" href="./images/rel.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+     <section id="parallax">
+        <img src="./images/1.png" data-speed="-5" class="layer">
+        <img src="./images/3.png" data-speed="2" class="layer">
+        <img src="./images/6.png" data-speed="-2" class="layer">
+        <img src="./images/7.png" data-speed="4" class="layer">
+        <img src="./images/8.png" data-speed="-9" class="layer">
+        <img src="./images/10.png" data-speed="-7" class="layer">
+        <img src="./images/11.png" data-speed="-5" class="layer">
+        <img src="./images/12.png" data-speed="5" class="layer">
+    </section>
+    <nav>
+        <div class="nav-container">
+            
+            <div class="logo">&lt; SS /&gt;</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a><span class="nav-icon"><i class="fas fa-home"></i></span></li>
+                <li><a href="#about">About</a><span class="nav-icon"></span><i class="fas fa-user"></i></span></li>
+                <li><a href="#projects">Projects</a><span class="nav-icon"></span><i class="fas fa-project-diagram"></i></span></li>
+                <li><a href="#education">Edu/Exp</a><span class="nav-icon"></span><i class="fas fa-graduation-cap"></i></span></li>
+                <li><a href="#" id="mode-toggle"><i class="fas fa-sun" id="mode-icon"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="profile-image">
+            <img src="images/wink.jpeg" alt="profile picture">
+            <!-- <img src="images/wink.jpeg" alt="Profile Picture> -->
+        </div>
+               <!-- <i class="fas fa-user-graduate"></i>  Changed to graduate icon, you can change it back to fa-user if you prefer -->
+    
+        <div class="intro-text">
+            <h1>Hi 👋, <br><span class="highlight-name">I'm Sujit Saroj</h1>
+            <p>A <span class="highlight">Machine Learning Engineer</span> who loves to code in Python. Also, I have some serious liking towards <span class="highlight">Frontend</span></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sujit-saroj-99bba6252/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/sujitsaroj9519" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:ssaroj9519@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://leetcode.com/u/Ssjit06/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
+                <a href="https://www.instagram.com/sarojsujit4/?next=%2F&hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div id="scroll-down"><a href="#about">Scroll Down <i class="fas fa-angle-double-down"></i></a></div>
+    <section id="about">
+        <!-- Your about section content goes here -->
+        <!-- About Section -->
+        <div class="about-container">
+            <div class="sidebar">
+                <div class="nav-box" data-target="cs">
+                    <h3>CS</h3>
+                    
+                </div>
+                <div class="nav-box" data-target="web-dev">
+                    <h3>Web Dev</h3>
+                    
+                </div>
+                <div class="nav-box" data-target="other-skills">
+                    <h3>Other Skills</h3>
+                    
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-box" id="cs">
+                    <h2>Computer Science</h2>
+                    <p>Proficient in core languages: Python and C++. Strong grasp of fundamental data structures (binary trees, BSTs, linked lists, stacks, queues, hash tables) and their algorithms. <br>Specialized in Gen AI with expertise in LLMs, Langchain, and safety frameworks like Guardrails AI. <br>Adept at building scalable APIs with FastAPI.</p>
+                    <div class="skills-box">
+                        <div class="skill">PYTHON</div>
+                        <div class="skill">C++</div>
+                        <div class="skill">LANGCHAIN</div>
+                        <div class="skill">LLM</div>
+                        <div class="skill">GUARDRAILS AI</div>
+                        <!-- Add more skills here -->
+                    </div>
+                </div>
+                <div class="content-box" id="web-dev">
+                    <h2>Web Development</h2>
+                    <p>Proficient in essential web technologies: HTML, CSS, JavaScript, and React. <br> Skilled in crafting responsive, visually appealing websites with clean, semantic markup, elegant stylesheets, and dynamic interactivity.</p>
+                    <div class="skills-box">
+                        <div class="skill">HTML</div>
+                        <div class="skill">CSS</div>
+                        <div class="skill">JAVASCRIPT</div>
+                        <div class="skill">REACT</div>
+                        <!-- Add more skills here -->
+                    </div>
+                </div>
+                <div class="content-box" id="other-skills">
+                    <h2>Other Skills</h2>
+                    <p>I also have a good understanding mysql Database Technology and postman. Proficient in working with version control(GIT).</p>
+                    <div class="skills-box">
+                        <div class="skill">MYSQL</div>
+                        <div class="skill">POSTMAN</div>
+                        <div class="skill">GIT</div>
+                        <!-- Add more skills here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <!-- Your projects section content goes here -->
+        <h2 class="projects-heading">My Projects</h2>
+        <div class="projects-container">
+            <div class="project-row">
+                <div class="project-box">
+                    <h3 class="project-name">Online Price Comparing System</h3>
+                    <!-- Add your project details here -->
+                    <div class="project-content">
+                        <p><center>This system is designed to compare the price of goods and services from a range of providers, which will help consumers in
+                            making decision to choose products that will save their money through online.</center></p>
+                            <div class="stack-container">
+                                <div class="stack-box">JavaScript</div>
+                                <div class="stack-box">CSS</div>
+                                <div class="stack-box">Flask</div>
+                            </div>
+                            <div class="github-link">
+                                <a href="https://github.com/sujitsaroj9519/Online-Price-Comparing-System" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3 class="project-name">Weather App</h3>
+                    <!-- Add your project details here -->
+                    <div class="project-content">
+                        <p><center>A weather app done with react. It allows to make a search for the current weather by simply typing “common knowledge”
+                        of cities.</center></p>
+                        <div class="stack-container">
+                            <div class="stack-box">React</div>
+                            <div class="stack-box">CSS</div>
+                            <div class="stack-box">Weather Api</div>
+                        </div>
+                        <div class="github-link">
+                            <a href="https://github.com/sujitsaroj9519/Weather-App/tree/master/Sujit" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-row">
+                <div class="project-box">
+                    <h3 class="project-name">Potato Leaf Disease Detection</h3>
+                    <!-- Add your project details here -->
+                    <div class="project-content">
+                        <p><center>Developed web application where the user can upload image of potato leaf and the model will classify whether the leaf image
+                        healthy or not.</center></p>
+                        <div class="stack-container">
+                            <div class="stack-box">React</div>
+                            <div class="stack-box">Python</div>
+                            <div class="stack-box">CNN</div>
+                        </div>
+                        <div class="github-link">
+                            <a href="https://github.com/sujitsaroj9519/Potato-leaf-disease-detection-using-machine-learning" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3 class="project-name">Drowsiness Detection Glasses</h3>
+                    <!-- Add your project details here -->
+                    <div class="project-content">
+                        <p><center>Created smart drowsiness detection glasses, which detect the drowsiness of driver when they are driving. Also glasses have
+                        ESP32 cam using it user capture the pictures.</center></p>
+                        <div class="stack-container">
+                            <div class="stack-box">Arduino Nano</div>
+                            <div class="stack-box">IR Blink Sensor</div>
+                            <div class="stack-box">C++</div>
+                        </div>
+                        <div class="github-link">
+                            <a href="https://github.com/sujitsaroj9519/Drowsiness-Detection-Glasses-IOT-" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-row">
+                <div class="project-box">
+                    <h3 class="project-name">Sales Agent</h3>
+                    <!-- Add your project details here -->
+                    <div class="project-content">
+                        <p><center>Developed Gen AI use case development within the sales domain where input was taken as natural language and LLM generates SQL query. SQL query is executed automatically to generate data and eventually graphs for data analysis. </center></p>
+                        <div class="stack-container">
+                            <div class="stack-box">OpenAi</div>
+                            <div class="stack-box">Python</div>
+                            
+                        </div>
+                        <div class="github-link">
+                            <a href="https://github.com/sujitsaroj9519/Sales_Agent" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3 class="project-name">ChatBot</h3>
+                    <!-- Add your project details here -->
+                    <div class="project-content">
+                        <p><center>A conversational AI assistant built with OpenAI's language model and Streamlit's interactive web app framework. Users can engage in natural language dialogues, asking questions on various topics, and receive intelligent responses generated by the AI model.</center></p>
+                        <div class="stack-container">
+                            <div class="stack-box">OpenAI</div>
+                            <div class="stack-box">Streamlit</div>
+                            
+                        </div>
+                        <div class="github-link">
+                            <a href="https://github.com/sujitsaroj9519/ChatBot-like-ChatGpt" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education/Experience Section -->
+    <!-- <section id="experience">
+        Your education/experience section content goes here
+    </section> -->
+    
+    <section id="education">
+        <div class="resume-box">
+            <div class="experience">
+                <div class="exp1">
+                    <div class="icon">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                    <div class="info">
+                        <span class="time">Dec 2023 - present</span>
+                        <h5 class="">ML Engineer <span class="place">Exponentia AI</span></h5>
+                        <p class="">Worked on a Live Project "AI Exponent" using FastAPI and Gen <br>AI models </p>
+                    </div>                    
+                </div>
+                <div class="exp2">
+                    <div class="icon">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                    <div class="info">
+                        <span class="time">Jan 2022 - Feb 2022</span>
+                        <h5 class="">Web Application Developer <span class="place">K.J.S.I.T</span></h5>
+                        <p class="">Developed a web application using React, CSS, Python and also<br> used a CNN model.</p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="resume-box">
+            <div class="experience">
+                <div class="exp1">
+                    <div class="icon">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    <div class="info">
+                        <span class="time">2019-2023</span>
+                        <h5 class="">Bachelor of Technology <span class="place">K.J.S.I.T</span></h5>
+                        <p class="">I have completed my Bachelor of Technology in Information Technology, graduating in the <br>year 2023 </p>
+                    </div>                    
+                </div>
+                <div class="exp2">
+                    <div class="icon">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    <div class="info">
+                        <span class="time">2018</span>
+                        <h5 class="">Junior College <span class="place">R.J College of Science and Commerce</span></h5>
+                        <p class="">Studied Science with Computer science as my Bifocal Elective Subject in place of Biology</p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="content">
+            <div class="footer-links">
+                <a href="#projects" title="view my projects">Projects</a>
+                <a href="#about" title="read about me">About Me</a>
+                <a href="#education" title="view experience">Experience</a>
+                <a href="#home" title="scroll to top">Move To Top</a>
+            </div>
+            <div class="social-footer">
+                <div style="text-align:center; margin-top:5px">
+                    <p style="font-size:1.2rem; color:#ccc; margin-bottom:.6rem;">Connect with me on</p>
+                </div>
+                <a href="https://github.com/sujitsaroj9519" title="GITHUB"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sujit-saroj-99bba6252/" title="LINKEDIN"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://leetcode.com/u/Ssjit06/" title="leetcode"><i class="fas fa-code"></i></a>
+                <a href="https://www.instagram.com/sarojsujit4/?next=%2F&hl=en" title="INSTAGRAM"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:ssaroj9519@gmail.com" title="GMAIL"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy;
+            <span><span class="copy-year"></span>,&nbsp;</span>
+            MADE WITH&nbsp; ❤&nbsp; BY SUJIT SAROJ
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
